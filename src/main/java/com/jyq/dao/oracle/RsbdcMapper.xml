@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jyq.dao.oracle.RsbdcMapper" >
+  <resultMap id="BaseResultMap" type="com.jyq.po.Rsbdc" >
+    <result column="BDCDYH" property="bdcdyh" jdbcType="OTHER" />
+    <result column="BDCQZH" property="bdcqzh" jdbcType="OTHER" />
+    <result column="ZL" property="zl" jdbcType="OTHER" />
+    <result column="YWH" property="ywh" jdbcType="OTHER" />
+    <result column="GYQK" property="gyqk" jdbcType="OTHER" />
+    <result column="GYFS" property="gyfs" jdbcType="OTHER" />
+    <result column="DJLX" property="djlx" jdbcType="OTHER" />
+    <result column="QLXZ" property="qlxz" jdbcType="OTHER" />
+    <result column="GHYT" property="ghyt" jdbcType="OTHER" />
+    <result column="JG" property="jg" jdbcType="OTHER" />
+    <result column="JZMJ" property="jzmj" jdbcType="OTHER" />
+    <result column="TNJZMJ" property="tnjzmj" jdbcType="OTHER" />
+    <result column="SFDY" property="sfdy" jdbcType="OTHER" />
+    <result column="SFCF" property="sfcf" jdbcType="OTHER" />
+    <result column="YWR" property="ywr" jdbcType="OTHER" />
+    <result column="QLRMC" property="qlrmc" jdbcType="OTHER" />
+    <result column="QLRZJH" property="qlrzjh" jdbcType="OTHER" />
+    <result column="DJJG" property="djjg" jdbcType="OTHER" />
+    <result column="DJRQ" property="djrq" jdbcType="OTHER" />
+    <result column="ZT" property="zt" jdbcType="OTHER" />
+    <result column="BZ" property="bz" jdbcType="OTHER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    BDCDYH, BDCQZH, ZL, YWH, GYQK, GYFS, DJLX, QLXZ, GHYT, JG, JZMJ, TNJZMJ, SFDY, SFCF, 
+    YWR, QLRMC, QLRZJH, DJJG, DJRQ, ZT, BZ
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.jyq.po.RsbdcExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from RSBDC
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <insert id="insert" parameterType="com.jyq.po.Rsbdc" >
+    insert into RSBDC (BDCDYH, BDCQZH, ZL, 
+      YWH, GYQK, GYFS, DJLX, 
+      QLXZ, GHYT, JG, JZMJ, 
+      TNJZMJ, SFDY, SFCF, YWR, 
+      QLRMC, QLRZJH, DJJG, DJRQ, 
+      ZT, BZ)
+    values (#{bdcdyh,jdbcType=OTHER}, #{bdcqzh,jdbcType=OTHER}, #{zl,jdbcType=OTHER}, 
+      #{ywh,jdbcType=OTHER}, #{gyqk,jdbcType=OTHER}, #{gyfs,jdbcType=OTHER}, #{djlx,jdbcType=OTHER}, 
+      #{qlxz,jdbcType=OTHER}, #{ghyt,jdbcType=OTHER}, #{jg,jdbcType=OTHER}, #{jzmj,jdbcType=OTHER}, 
+      #{tnjzmj,jdbcType=OTHER}, #{sfdy,jdbcType=OTHER}, #{sfcf,jdbcType=OTHER}, #{ywr,jdbcType=OTHER}, 
+      #{qlrmc,jdbcType=OTHER}, #{qlrzjh,jdbcType=OTHER}, #{djjg,jdbcType=OTHER}, #{djrq,jdbcType=OTHER}, 
+      #{zt,jdbcType=OTHER}, #{bz,jdbcType=OTHER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jyq.po.Rsbdc" >
+    insert into RSBDC
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bdcdyh != null" >
+        BDCDYH,
+      </if>
+      <if test="bdcqzh != null" >
+        BDCQZH,
+      </if>
+      <if test="zl != null" >
+        ZL,
+      </if>
+      <if test="ywh != null" >
+        YWH,
+      </if>
+      <if test="gyqk != null" >
+        GYQK,
+      </if>
+      <if test="gyfs != null" >
+        GYFS,
+      </if>
+      <if test="djlx != null" >
+        DJLX,
+      </if>
+      <if test="qlxz != null" >
+        QLXZ,
+      </if>
+      <if test="ghyt != null" >
+        GHYT,
+      </if>
+      <if test="jg != null" >
+        JG,
+      </if>
+      <if test="jzmj != null" >
+        JZMJ,
+      </if>
+      <if test="tnjzmj != null" >
+        TNJZMJ,
+      </if>
+      <if test="sfdy != null" >
+        SFDY,
+      </if>
+      <if test="sfcf != null" >
+        SFCF,
+      </if>
+      <if test="ywr != null" >
+        YWR,
+      </if>
+      <if test="qlrmc != null" >
+        QLRMC,
+      </if>
+      <if test="qlrzjh != null" >
+        QLRZJH,
+      </if>
+      <if test="djjg != null" >
+        DJJG,
+      </if>
+      <if test="djrq != null" >
+        DJRQ,
+      </if>
+      <if test="zt != null" >
+        ZT,
+      </if>
+      <if test="bz != null" >
+        BZ,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bdcdyh != null" >
+        #{bdcdyh,jdbcType=OTHER},
+      </if>
+      <if test="bdcqzh != null" >
+        #{bdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="zl != null" >
+        #{zl,jdbcType=OTHER},
+      </if>
+      <if test="ywh != null" >
+        #{ywh,jdbcType=OTHER},
+      </if>
+      <if test="gyqk != null" >
+        #{gyqk,jdbcType=OTHER},
+      </if>
+      <if test="gyfs != null" >
+        #{gyfs,jdbcType=OTHER},
+      </if>
+      <if test="djlx != null" >
+        #{djlx,jdbcType=OTHER},
+      </if>
+      <if test="qlxz != null" >
+        #{qlxz,jdbcType=OTHER},
+      </if>
+      <if test="ghyt != null" >
+        #{ghyt,jdbcType=OTHER},
+      </if>
+      <if test="jg != null" >
+        #{jg,jdbcType=OTHER},
+      </if>
+      <if test="jzmj != null" >
+        #{jzmj,jdbcType=OTHER},
+      </if>
+      <if test="tnjzmj != null" >
+        #{tnjzmj,jdbcType=OTHER},
+      </if>
+      <if test="sfdy != null" >
+        #{sfdy,jdbcType=OTHER},
+      </if>
+      <if test="sfcf != null" >
+        #{sfcf,jdbcType=OTHER},
+      </if>
+      <if test="ywr != null" >
+        #{ywr,jdbcType=OTHER},
+      </if>
+      <if test="qlrmc != null" >
+        #{qlrmc,jdbcType=OTHER},
+      </if>
+      <if test="qlrzjh != null" >
+        #{qlrzjh,jdbcType=OTHER},
+      </if>
+      <if test="djjg != null" >
+        #{djjg,jdbcType=OTHER},
+      </if>
+      <if test="djrq != null" >
+        #{djrq,jdbcType=OTHER},
+      </if>
+      <if test="zt != null" >
+        #{zt,jdbcType=OTHER},
+      </if>
+      <if test="bz != null" >
+        #{bz,jdbcType=OTHER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

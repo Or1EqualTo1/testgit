@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jyq.dao.access.TestAccessMapper">
+
+    <resultMap id="BaseResultMap" type="com.jyq.po.access.AccessExample">
+        <result column="DKDM" property="DKBMVal" jdbcType="VARCHAR"/>
+        <result column="CBFBM" property="CBFBMVal" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <update id="cbjyqzdjbcbjyqzbm" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                     SET CBJYQZBM = ""
+                                                                     WHERE CBJYQZBM  IS NULL </update>
+    <update id="cbjyqzdjbfbfbm" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                  SET FBFBM = ""
+                                                                  WHERE FBFBM  IS NULL </update>
+    <update id="cbjyqzdjbcbfbm" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                  SET CBFBM = ""
+                                                                  WHERE CBFBM  IS NULL </update>
+    <update id="cbjyqzdjbcbfs" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                 SET CBFS = ""
+                                                                 WHERE CBFS  IS NULL </update>
+    <update id="cbjyqzdjbcbqx" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                 SET CBQX = ""
+                                                                 WHERE CBQX  IS NULL </update>
+    <update id="cbjyqzdjbcbqxq" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                  SET CBQXQ = CDate('1900/1/1')
+                                                                  WHERE CBQXQ  IS NULL </update>
+    <update id="cbjyqzdjbcbqxz" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                  SET CBQXZ = CDate('1900/1/1')
+                                                                  WHERE CBQXZ  IS NULL </update>
+    <update id="cbjyqzdjbdbr" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                SET DBR = ""
+                                                                WHERE DBR  IS NULL </update>
+    <update id="cbjyqzdjbdjsj" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                 SET DJSJ = CDate('1900/1/1')
+                                                                 WHERE DJSJ  IS NULL </update>
+    <update id="cbdkxxdkbm" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                              SET DKBM = ""
+                                                              WHERE DKBM  IS NULL </update>
+    <update id="cbdkxxfbfbm" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                               SET FBFBM = ""
+                                                               WHERE FBFBM  IS NULL </update>
+    <update id="cbdkxxcbfbm" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                               SET CBFBM = ""
+                                                               WHERE CBFBM  IS NULL </update>
+    <update id="cbdkxxcbjyqqdfs" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                                   SET CBJYQQDFS = ""
+                                                                   WHERE CBJYQQDFS  IS NULL </update>
+    <update id="cbdkxxcbhtbm" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                                SET CBHTBM = ""
+                                                                WHERE CBHTBM  IS NULL </update>
+    <update id="cbdkxxcbjyqzbm" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                                  SET CBJYQZBM = ""
+                                                                  WHERE CBJYQZBM  IS NULL </update>
+    <update id="cbdkxxhtmj" parameterType="java.lang.String"> UPDATE CBDKXX
+                                                              SET HTMJ = ""
+                                                              WHERE HTMJ  IS NULL </update>
+    <update id="cbfjtcycbfbm" parameterType="java.lang.String"> UPDATE CBF_JTCY
+                                                                SET CBFBM = ""
+                                                                WHERE CBFBM  IS NULL </update>
+    <update id="cbfjtcycyxm" parameterType="java.lang.String"> UPDATE CBF_JTCY
+                                                               SET CYXM = ""
+                                                               WHERE CYXM  IS NULL </update>
+    <update id="cbfjtcycyxb" parameterType="java.lang.String"> UPDATE CBF_JTCY
+                                                               SET CYXB = ""
+                                                               WHERE CYXB  IS NULL </update>
+    <update id="cbfjtcycyzjlx" parameterType="java.lang.String"> UPDATE CBF_JTCY
+                                                                 SET CYZJLX = ""
+                                                                 WHERE CYZJLX  IS NULL </update>
+    <update id="cbfjtcycyzjhm" parameterType="java.lang.String"> UPDATE CBF_JTCY
+                                                                 SET CYZJHM = ""
+                                                                 WHERE CYZJHM  IS NULL </update>
+    <update id="cbfjtcyyhzgx" parameterType="java.lang.String"> UPDATE CBF_JTCY
+                                                                SET YHZGX = ""
+                                                                WHERE YHZGX  IS NULL </update>
+    <update id="cbjyqzdjbcbjyqzlsh" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                      SET CBJYQZLSH  = ""
+                                                                      WHERE CBJYQZLSH   IS NULL </update>
+    <update id="cbjyqzdjbdksyt" parameterType="java.lang.String"> UPDATE CBJYQZDJB
+                                                                  SET DKSYT  = ""
+                                                                  WHERE DKSYT   IS NULL </update>
+
+    <select id="selectByHtmj" resultMap="BaseResultMap" parameterType="java.lang.String">
+
+        select XX.CBFBM     AS SLID,
+               XX.DKBM      AS DJKID,
+               CBF.CBFDZ    AS ZL,
+               ''           AS QLLX,
+               ''           AS YSLH,
+               ''           AS QLXZ,
+               '0'          AS DJBZT,
+               Z.FZJG       AS DJJG,
+               '1'          AS BDCLX,
+               ''           AS BDCDYH,
+               CBF.CBFMC    AS QLR,
+               CBF.CBFZJLX  AS QLRZJZL,
+               CBF.CBFZJHM  AS QLRZJBH,
+               ''           AS DJLX,
+               ''           AS DJYY,
+               ''           AS GYQK,
+               DJB.CBQXQ    AS SYQXQ,
+               DJB.CBQXZ    AS SYQXZ,
+               XX.CBJYQZBM  AS BDCQZH,
+               XX.CBJYQZBM  AS CBHTBM,
+               HT.CBFS      AS CBFS,
+               FBF.FBFMC    AS FBF,
+               HT.HTZMJ     AS CBSYQMJ,
+               FBF.FBFBM    AS FBFDM,
+               FBF.FBFFZRXM AS FBFFZR,
+               CBF.CBFBM    AS CBFDM,
+               CBF.CBFMC    AS CBFDB,
+               CBF.CBFZJHM  AS CBFSFZH,
+               XX.DKBM      AS DKDM,
+               DJB.DBR      AS DBR,
+               DJB.DJSJ     AS DJSJ,
+               DJB.DJBFJ    AS FJ,
+               '0'          AS MJDW,
+               CBF.CBFZJLX  AS CBFDBZJZL,
+               DJB.CBQX     AS CBQX
+        from CBDKXX XX,
+             CBJYQZDJB DJB,
+             CBF,
+             CBJYQZ Z,
+             CBHT HT,
+             FBF
+        WHERE DJB.CBFBM = XX.CBFBM
+          AND CBF.CBFBM = XX.CBFBM
+          AND Z.CBJYQZBM = DJB.CBJYQZBM
+          AND HT.CBFBM = CBF.CBFBM
+          AND FBF.FBFBM = DJB.FBFBM
+          AND XX.DKBM = #{jId}
+    </select>
+    <select id="selectAccessCt" resultType="java.lang.Integer">
+
+        select count(*) AS CT
+        from CBJYQZDJB
+        WHERE BS = ''
+           or BS is null
+    </select>
+    <select id="selectByAll" resultType="java.lang.String">
+        select top 1 CBFBM
+        from CBJYQZDJB
+        WHERE (BS = '' or BS is null)
+    </select>
+    <select id="selectAccessCt2" resultType="java.lang.Integer" parameterType="java.lang.String">
+
+        select count(*) AS CT
+        from CBDKXX
+        WHERE CBFBM = #{cbfbm}
+
+    </select>
+    <select id="selectByDkbm" resultType="java.lang.String" parameterType="com.jyq.po.access.AccessExample">
+        SELECT J3.DKBM FROM
+            (
+                select top #{oid} DKBM
+                from CBDKXX
+                WHERE
+                    CBFBM =#{slid}
+            ) J3
+                LEFT JOIN
+            (
+                select top #{oid1} DKBM
+                from CBDKXX
+                WHERE
+                    CBFBM =#{slid}
+            ) J2
+            ON J2.DKBM=J3.DKBM WHERE  J2.DKBM IS NULL
+    </select>
+    <select id="selectByDkbm1" resultType="java.lang.String" parameterType="com.jyq.po.access.AccessExample">
+        select top 1 DKBM
+        from CBDKXX
+        WHERE
+            CBFBM =#{slid}
+    </select>
+    <select id="selectAccessDjb" resultType="com.jyq.po.access.AccessExample"
+            parameterType="com.jyq.po.access.AccessExample">
+
+        select XX.CBFBM      AS slid,
+               XX.DKBM       AS djkid,
+               CBF.CBFDZ     AS zl,
+               '9'           AS qllx,
+               ''            AS yslh,
+               ''            AS qlxz,
+               '0'           AS djbzt,
+               Z.FZJG        AS djjg,
+               '1'           AS bdclx,
+               ''            AS bdcdyh,
+               CBF.CBFMC     AS qlr,
+               CBF.CBFZJLX   AS qlrzjzl,
+               CBF.CBFZJHM   AS qlrzjbh,
+               ''            AS djlx,
+               '土地承包经营权首次登记' AS djyy,
+               ''            AS gyqk,
+               DJB.CBQXQ     AS syqxq,
+               DJB.CBQXZ     AS syqxz,
+               XX.CBJYQZBM   AS bdcqzh,
+               XX.CBJYQZBM   AS cbhtbm,
+               HT.CBFS       AS cbfs,
+               FBF.FBFMC     AS fbf,
+               XX.HTMJ       AS cbsyqmj,
+               FBF.FBFBM     AS fbfdm,
+               FBF.FBFFZRXM  AS fbffzr,
+               CBF.CBFBM     AS cbfdm,
+               CBF.CBFMC     AS cbfdb,
+               CBF.CBFZJHM   AS cbfsfzh,
+               XX.DKBM       AS dkdm,
+               DJB.DBR       AS dbr,
+               DJB.DJSJ      AS djsj,
+               DJB.DJBFJ     AS fj,
+               '0'           AS mjdw,
+               CBF.CBFZJLX   AS cbfdbzjzl,
+               DJB.CBQX      AS cbqx,
+               #{oid}        AS oid,
+               #{gid}        AS gid,
+               #{qxdm}       AS qxdm
+
+
+        from CBDKXX XX,
+             CBJYQZDJB DJB,
+             CBF,
+             CBJYQZ Z,
+             CBHT HT,
+             FBF
+        WHERE DJB.CBFBM = XX.CBFBM
+          AND CBF.CBFBM = XX.CBFBM
+          AND Z.CBJYQZBM = DJB.CBJYQZBM
+          AND HT.CBFBM = CBF.CBFBM
+          AND FBF.FBFBM = DJB.FBFBM
+          AND XX.DKBM = #{dkdm}
+
+    </select>
+
+    <update id="updateByPrimaryKey" parameterType="java.lang.String">
+        update CBDKXX
+        set BS = '1'
+        where DKBM = #{dkbm,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByDjb" parameterType="java.lang.String">
+        update CBJYQZDJB
+        set BS = '1'
+        where CBFBM = #{cbfbm,jdbcType=VARCHAR}
+    </update>
+
+    <select id="selectqlrlb" resultType="com.jyq.po.access.QlrlbExample"
+            parameterType="com.jyq.po.access.QlrlbExample">
+
+        select #{cbsyqmj}         as cbsyqmj,
+               #{dkdm}         as dkdm,
+               CBF.cbfbm       as slid,
+               CBF.cbfzjlx     as zjzl,
+               1               as xh,
+               '1'             as bdclx,
+               CBF.CBFZJHM     as zjhm,
+               CBF.cbfmc       as qlrmc,
+               CBF.cbfbm       as cbfbm,
+               CBJYQZDJB.fbfbm as fbfbm,
+               '2'             as qlrtz,
+               '1'             as qlrlx,
+               9               as qllx,
+               CBF.cbfdz       as dz,
+               '142'           as gj,
+               CBF.lxdh        as dh,
+               CBF.YZBM        as yb,
+               #{sxh}          as sxh,
+               #{bz}           as bz,
+               #{qlrid}        as qlrid,
+               #{qxdm}         as qxdm
+
+        from CBF CBF,
+             CBJYQZDJB CBJYQZDJB
+        where CBJYQZDJB.CBFBM = CBF.CBFBM
+          and CBF.CBFBM = #{cbfbm}
+    </select>
+
+    <select id="selectywrlb" resultType="com.jyq.po.access.QlrlbExample"
+            parameterType="com.jyq.po.access.QlrlbExample">
+        select #{cbfbm}    as slid,
+               FBF.FZRZJLX as zjzl,
+               1           as xh,
+               '1'         as bdclx,
+               FBF.FZRZJHM as zjhm,
+               FBF.FBFMC   as qlrmc,
+               #{cbfbm}    as cbfbm,
+               #{fbfbm}    as fbfbm,
+               '1'         as qlrtz,
+               '4'         as qlrlx,
+               9           as qllx,
+               FBF.FBFDZ   as dz,
+               '142'       as gj,
+               FBF.LXDH    as dh,
+               FBF.YZBM    as yb,
+               #{sxh}      as sxh,
+               #{bz}       as bz,
+               #{qlrid}    as qlrid,
+               #{qxdm}     as qxdm
+        from FBF
+        where FBF.FBFBM = #{fbfbm}
+    </select>
+
+    <select id="selectJtcyCt" resultType="java.lang.Integer" parameterType="java.lang.String">
+
+        select count(*) AS CT
+        from CBF_JTCY
+        WHERE
+           CBFBM = #{cbfbm}
+    </select>
+    <!--    -->
+    <select id="selectJtcy" resultType="com.jyq.po.access.JtcyExample"
+            parameterType="com.jyq.po.access.JtcyExample">
+        SELECT J3.slid AS slid,J3.oid AS oid,J3.xm AS xm,J3.xb AS xb,J3.ycbfdbgx AS ycbfdbgx,J3.sfzhm AS sfzhm,J3.djkid AS djkid FROM
+            (SELECT top #{cyoid} CBFBM AS slid,#{oid} AS oid, CYXM AS xm, CYXB AS xb, YHZGX AS ycbfdbgx, CYZJHM AS sfzhm,#{djkid} AS djkid
+             FROM CBF_JTCY ,CBDKXX
+             WHERE  CBF_JTCY.CBFBM=CBDKXX.CBFBM AND  CBF_JTCY.CBFBM = #{slid} AND CBDKXX.DKBM=#{djkid}) J3
+                LEFT JOIN
+            (SELECT top #{oid1} CBFBM AS slid,#{oid1} AS oid, CYXM AS xm, CYXB AS xb, YHZGX AS ycbfdbgx, CYZJHM AS sfzhm,#{djkid} AS djkid
+             FROM CBF_JTCY ,CBDKXX
+             WHERE  CBF_JTCY.CBFBM=CBDKXX.CBFBM AND  CBF_JTCY.CBFBM = #{slid} AND CBDKXX.DKBM=#{djkid}) J2
+            ON J2.sfzhm=J3.sfzhm WHERE  J2.sfzhm IS NULL
+    </select>
+    <select id="selectJtcy1" resultType="com.jyq.po.access.JtcyExample"
+            parameterType="com.jyq.po.access.JtcyExample">
+        SELECT top 1 CBFBM AS slid,#{oid} AS oid, CYXM AS xm, CYXB AS xb, YHZGX AS ycbfdbgx, CYZJHM AS sfzhm,#{djkid} AS djkid
+        FROM CBF_JTCY
+        WHERE  CBFBM = #{slid}
+    </select>
+    <update id="updateJtcy" parameterType="java.lang.String">
+        update CBF_JTCY
+        set BS = '1'
+        where CYZJHM = #{sfzhm,jdbcType=VARCHAR}
+    </update>
+</mapper>

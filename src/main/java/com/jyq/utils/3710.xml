@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config[
+    <!ELEMENT config (action*)>
+    <!ELEMENT action (forward*)> 
+    <!ELEMENT forward EMPTY>
+    <!ATTLIST action
+       path CDATA #REQUIRED
+       type CDATA #REQUIRED
+    >
+      <!ATTLIST forward
+       path CDATA #REQUIRED
+       name CDATA #REQUIRED
+       redirect (true|false) "false"
+    >
+]>
+	<!--
+		config标签:可以包含0~N个action标签
+	-->
+<config>
+	<!--
+		action标签:可以饱含0~N个forward标签 path:以/开头的字符串,并且值必须唯一 非空 ,子控制器对应的路径
+		type:字符串,非空，子控制器的完整类名
+	-->
+	<action path="/registerAction" type="test.action.RegisterAction">
+		<forward name="success" path="/index.jsp" redirect="true" />
+		<forward name="failed" path="/register.jsp" redirect="false" />
+	</action>
+	<action path="/loginAction" type="test.action.LoginAction">
+		<forward name="a" path="/index.jsp" redirect="false" />
+		<forward name="b" path="/welcome.jsp" redirect="true" />
+	</action>
+</config>

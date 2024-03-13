@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jyq.dao.oracle.BdcRegnCbjyqNydJtcyMapper">
+  <resultMap id="BaseResultMap" type="com.jyq.po.BdcRegnCbjyqNydJtcy">
+    <id column="SLID" jdbcType="CHAR" property="slid" />
+    <id column="OID" jdbcType="DECIMAL" property="oid" />
+    <result column="XM" jdbcType="VARCHAR" property="xm" />
+    <result column="XB" jdbcType="DECIMAL" property="xb" />
+    <result column="YCBFDBGX" jdbcType="VARCHAR" property="ycbfdbgx" />
+    <result column="SFZHM" jdbcType="VARCHAR" property="sfzhm" />
+    <result column="BZ" jdbcType="VARCHAR" property="bz" />
+    <result column="DJKID" jdbcType="VARCHAR" property="djkid" />
+    <result column="CERID" jdbcType="CHAR" property="cerid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    SLID, OID, XM, XB, YCBFDBGX, SFZHM, BZ, DJKID, CERID
+  </sql>
+  <select id="selectByExample" parameterType="com.jyq.po.BdcRegnCbjyqNydJtcyExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from BDC_REGN_CBJYQ_NYD_JTCY
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.jyq.po.BdcRegnCbjyqNydJtcyKey" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from BDC_REGN_CBJYQ_NYD_JTCY
+    where SLID = #{slid,jdbcType=CHAR}
+    and OID = #{oid,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.jyq.po.BdcRegnCbjyqNydJtcyKey">
+    delete from BDC_REGN_CBJYQ_NYD_JTCY
+    where SLID = #{slid,jdbcType=CHAR}
+      and OID = #{oid,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.jyq.po.access.JtcyExample">
+    insert into BDC_REGN_CBJYQ_NYD_JTCY (SLID, OID, XM, XB,
+                                         YCBFDBGX, SFZHM,DJKID
+                                         )
+    values (#{slid,jdbcType=CHAR}, #{oid,jdbcType=INTEGER}, #{xm,jdbcType=VARCHAR}, #{xb,jdbcType=INTEGER},
+            #{ycbfdbgx,jdbcType=VARCHAR}, #{sfzhm,jdbcType=VARCHAR}, #{djkid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jyq.po.BdcRegnCbjyqNydJtcy">
+    insert into BDC_REGN_CBJYQ_NYD_JTCY
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="slid != null">
+        SLID,
+      </if>
+      <if test="oid != null">
+        OID,
+      </if>
+      <if test="xm != null">
+        XM,
+      </if>
+      <if test="xb != null">
+        XB,
+      </if>
+      <if test="ycbfdbgx != null">
+        YCBFDBGX,
+      </if>
+      <if test="sfzhm != null">
+        SFZHM,
+      </if>
+      <if test="bz != null">
+        BZ,
+      </if>
+      <if test="djkid != null">
+        DJKID,
+      </if>
+      <if test="cerid != null">
+        CERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="slid != null">
+        #{slid,jdbcType=CHAR},
+      </if>
+      <if test="oid != null">
+        #{oid,jdbcType=DECIMAL},
+      </if>
+      <if test="xm != null">
+        #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="xb != null">
+        #{xb,jdbcType=DECIMAL},
+      </if>
+      <if test="ycbfdbgx != null">
+        #{ycbfdbgx,jdbcType=VARCHAR},
+      </if>
+      <if test="sfzhm != null">
+        #{sfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="djkid != null">
+        #{djkid,jdbcType=VARCHAR},
+      </if>
+      <if test="cerid != null">
+        #{cerid,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jyq.po.BdcRegnCbjyqNydJtcy">
+    update BDC_REGN_CBJYQ_NYD_JTCY
+    <set>
+      <if test="xm != null">
+        XM = #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="xb != null">
+        XB = #{xb,jdbcType=DECIMAL},
+      </if>
+      <if test="ycbfdbgx != null">
+        YCBFDBGX = #{ycbfdbgx,jdbcType=VARCHAR},
+      </if>
+      <if test="sfzhm != null">
+        SFZHM = #{sfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        BZ = #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="djkid != null">
+        DJKID = #{djkid,jdbcType=VARCHAR},
+      </if>
+      <if test="cerid != null">
+        CERID = #{cerid,jdbcType=CHAR},
+      </if>
+    </set>
+    where SLID = #{slid,jdbcType=CHAR}
+    and OID = #{oid,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jyq.po.BdcRegnCbjyqNydJtcy">
+    update BDC_REGN_CBJYQ_NYD_JTCY
+    set XM = #{xm,jdbcType=VARCHAR},
+        XB = #{xb,jdbcType=DECIMAL},
+        YCBFDBGX = #{ycbfdbgx,jdbcType=VARCHAR},
+        SFZHM = #{sfzhm,jdbcType=VARCHAR},
+        BZ = #{bz,jdbcType=VARCHAR},
+        DJKID = #{djkid,jdbcType=VARCHAR},
+        CERID = #{cerid,jdbcType=CHAR}
+    where SLID = #{slid,jdbcType=CHAR}
+      and OID = #{oid,jdbcType=DECIMAL}
+  </update>
+
+</mapper>

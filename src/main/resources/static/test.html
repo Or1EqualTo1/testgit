@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery_2.1.4_baidu_min.js"></script>
+
+<body>
+
+<button id="but2" onclick="selectId()">access</button>
+</body>
+<script>
+    function selectId() {
+        $.ajax({
+            url: "selectId.do",
+            type: "post",
+            dataType: "json",
+            data: {
+
+            },
+            success: function (result) {
+
+            }
+        })
+    }
+</script>
+</html>

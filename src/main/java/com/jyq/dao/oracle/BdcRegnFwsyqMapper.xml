@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jyq.dao.oracle.BdcRegnFwsyqMapper">
+  <resultMap id="BaseResultMap" type="com.jyq.po.BdcRegnFwsyq">
+    <id column="DJKID" jdbcType="OTHER" property="djkid" />
+    <id column="OID" jdbcType="DECIMAL" property="oid" />
+    <result column="SLID" jdbcType="CHAR" property="slid" />
+    <result column="MJDW" jdbcType="DECIMAL" property="mjdw" />
+    <result column="GHYT" jdbcType="OTHER" property="ghyt" />
+    <result column="DJLX" jdbcType="OTHER" property="djlx" />
+    <result column="FWXZ" jdbcType="OTHER" property="fwxz" />
+    <result column="BDCDYH" jdbcType="OTHER" property="bdcdyh" />
+    <result column="SYQXZ" jdbcType="DATE" property="syqxz" />
+    <result column="FDCJYJG" jdbcType="FLOAT" property="fdcjyjg" />
+    <result column="DJJG" jdbcType="OTHER" property="djjg" />
+    <result column="QLRZJZL" jdbcType="DECIMAL" property="qlrzjzl" />
+    <result column="DJXL" jdbcType="OTHER" property="djxl" />
+    <result column="ZCS" jdbcType="DECIMAL" property="zcs" />
+    <result column="DJBZT" jdbcType="OTHER" property="djbzt" />
+    <result column="QLLX" jdbcType="OTHER" property="qllx" />
+    <result column="DBR" jdbcType="OTHER" property="dbr" />
+    <result column="FWJG" jdbcType="DECIMAL" property="fwjg" />
+    <result column="SZCS" jdbcType="OTHER" property="szcs" />
+    <result column="FWSUOYQLR" jdbcType="OTHER" property="fwsuoyqlr" />
+    <result column="QXDM" jdbcType="OTHER" property="qxdm" />
+    <result column="FTTDMJ" jdbcType="FLOAT" property="fttdmj" />
+    <result column="DYTDMJ" jdbcType="FLOAT" property="dytdmj" />
+    <result column="DJSJ" jdbcType="DATE" property="djsj" />
+    <result column="BDCQZH" jdbcType="OTHER" property="bdcqzh" />
+    <result column="FDZL" jdbcType="OTHER" property="fdzl" />
+    <result column="FTJZMJ" jdbcType="FLOAT" property="ftjzmj" />
+    <result column="ZYJZMJ" jdbcType="FLOAT" property="zyjzmj" />
+    <result column="JZMJ" jdbcType="FLOAT" property="jzmj" />
+    <result column="FJ" jdbcType="OTHER" property="fj" />
+    <result column="BZ" jdbcType="OTHER" property="bz" />
+    <result column="QLRLX" jdbcType="OTHER" property="qlrlx" />
+    <result column="GYQK" jdbcType="OTHER" property="gyqk" />
+    <result column="QLRZJBH" jdbcType="OTHER" property="qlrzjbh" />
+    <result column="DJYY" jdbcType="OTHER" property="djyy" />
+    <result column="TDSHIYQR" jdbcType="OTHER" property="tdshiyqr" />
+    <result column="SYQXQ" jdbcType="DATE" property="syqxq" />
+    <result column="SJHQBS" jdbcType="DECIMAL" property="sjhqbs" />
+    <result column="SJHQSJ" jdbcType="DATE" property="sjhqsj" />
+    <result column="HOUSE_ID" jdbcType="OTHER" property="houseId" />
+    <result column="FOUR_CODE" jdbcType="OTHER" property="fourCode" />
+    <result column="OLDSLID" jdbcType="OTHER" property="oldslid" />
+    <result column="BDCLX" jdbcType="DECIMAL" property="bdclx" />
+    <result column="QLXZ" jdbcType="OTHER" property="qlxz" />
+    <result column="YSLH" jdbcType="CHAR" property="yslh" />
+    <result column="YZSH" jdbcType="OTHER" property="yzsh" />
+    <result column="CQLY" jdbcType="DECIMAL" property="cqly" />
+    <result column="GLQY" jdbcType="OTHER" property="glqy" />
+    <result column="TDDBSJ" jdbcType="DATE" property="tddbsj" />
+    <result column="TDDBR" jdbcType="OTHER" property="tddbr" />
+    <result column="TDCQZH" jdbcType="OTHER" property="tdcqzh" />
+    <result column="DBYJ" jdbcType="OTHER" property="dbyj" />
+    <result column="DBYJQZ" jdbcType="OTHER" property="dbyjqz" />
+    <result column="DJJGDM" jdbcType="VARCHAR" property="djjgdm" />
+    <result column="DJJGMC" jdbcType="VARCHAR" property="djjgmc" />
+    <result column="TDZH" jdbcType="OTHER" property="tdzh" />
+    <result column="QSXZ" jdbcType="OTHER" property="qsxz" />
+    <result column="TDYT" jdbcType="OTHER" property="tdyt" />
+    <result column="TDFZRQ" jdbcType="DATE" property="tdfzrq" />
+    <result column="QDFS" jdbcType="OTHER" property="qdfs" />
+    <result column="TDSYQMJ" jdbcType="DECIMAL" property="tdsyqmj" />
+    <result column="JYRQ" jdbcType="DATE" property="jyrq" />
+    <result column="JGND" jdbcType="OTHER" property="jgnd" />
+    <result column="ZBK_RECEIVENO" jdbcType="OTHER" property="zbkReceiveno" />
+    <result column="ZJF_AFSSJCLZT" jdbcType="OTHER" property="zjfAfssjclzt" />
+    <result column="ZJF_SJXGNAME" jdbcType="OTHER" property="zjfSjxgname" />
+    <result column="ZJF_SJXGJILU" jdbcType="OTHER" property="zjfSjxgjilu" />
+    <result column="YWR" jdbcType="OTHER" property="ywr" />
+    <result column="YWRZJBH" jdbcType="OTHER" property="ywrzjbh" />
+    <result column="ZJF_DAH" jdbcType="OTHER" property="zjfDah" />
+    <result column="ZJF_BDCQZH" jdbcType="OTHER" property="zjfBdcqzh" />
+    <result column="ZJF_FDZL" jdbcType="OTHER" property="zjfFdzl" />
+    <result column="ZJF_QLR" jdbcType="OTHER" property="zjfQlr" />
+    <result column="ZJF_QLRZJBH" jdbcType="OTHER" property="zjfQlrzjbh" />
+    <result column="ZJF_SJBLLU" jdbcType="OTHER" property="zjfSjbllu" />
+    <result column="GID" jdbcType="VARCHAR" property="gid" />
+    <result column="ZYFGHBBS" jdbcType="DECIMAL" property="zyfghbbs" />
+    <result column="FWXZMC" jdbcType="VARCHAR" property="fwxzmc" />
+    <result column="JGSJ" jdbcType="VARCHAR" property="jgsj" />
+    <result column="CZHQBS" jdbcType="DECIMAL" property="czhqbs" />
+    <result column="CZHQSJ" jdbcType="DATE" property="czhqsj" />
+    <result column="BDCDYH1" jdbcType="OTHER" property="bdcdyh1" />
+    <result column="PZYT" jdbcType="OTHER" property="pzyt" />
+    <result column="SJYT" jdbcType="OTHER" property="sjyt" />
+    <result column="YTMC" jdbcType="OTHER" property="ytmc" />
+    <result column="SYQQX" jdbcType="OTHER" property="syqqx" />
+    <result column="JEDW" jdbcType="OTHER" property="jedw" />
+    <result column="FZHJ" jdbcType="OTHER" property="fzhj" />
+    <result column="ZDDM" jdbcType="OTHER" property="zddm" />
+    <result column="BDCDYH2" jdbcType="OTHER" property="bdcdyh2" />
+    <result column="XGBJ" jdbcType="OTHER" property="xgbj" />
+    <result column="FCTSBS" jdbcType="DECIMAL" property="fctsbs" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    DJKID, OID, SLID, MJDW, GHYT, DJLX, FWXZ, BDCDYH, SYQXZ, FDCJYJG, DJJG, QLRZJZL, 
+    DJXL, ZCS, DJBZT, QLLX, DBR, FWJG, SZCS, FWSUOYQLR, QXDM, FTTDMJ, DYTDMJ, DJSJ, BDCQZH, 
+    FDZL, FTJZMJ, ZYJZMJ, JZMJ, FJ, BZ, QLRLX, GYQK, QLRZJBH, DJYY, TDSHIYQR, SYQXQ, 
+    SJHQBS, SJHQSJ, HOUSE_ID, FOUR_CODE, OLDSLID, BDCLX, QLXZ, YSLH, YZSH, CQLY, GLQY, 
+    TDDBSJ, TDDBR, TDCQZH, DBYJ, DBYJQZ, DJJGDM, DJJGMC, TDZH, QSXZ, TDYT, TDFZRQ, QDFS, 
+    TDSYQMJ, JYRQ, JGND, ZBK_RECEIVENO, ZJF_AFSSJCLZT, ZJF_SJXGNAME, ZJF_SJXGJILU, YWR, 
+    YWRZJBH, ZJF_DAH, ZJF_BDCQZH, ZJF_FDZL, ZJF_QLR, ZJF_QLRZJBH, ZJF_SJBLLU, GID, ZYFGHBBS, 
+    FWXZMC, JGSJ, CZHQBS, CZHQSJ, BDCDYH1, PZYT, SJYT, YTMC, SYQQX, JEDW, FZHJ, ZDDM, 
+    BDCDYH2, XGBJ, FCTSBS
+  </sql>
+  <select id="selectByExample" parameterType="com.jyq.po.BdcRegnFwsyqExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from BDC_REGN_FWSYQ
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.jyq.po.BdcRegnFwsyqKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from BDC_REGN_FWSYQ
+    where DJKID = #{djkid,jdbcType=OTHER}
+      and OID = #{oid,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.jyq.po.BdcRegnFwsyqKey">
+    delete from BDC_REGN_FWSYQ
+    where DJKID = #{djkid,jdbcType=OTHER}
+      and OID = #{oid,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.jyq.po.BdcRegnFwsyq">
+    insert into BDC_REGN_FWSYQ (DJKID, OID, SLID, 
+      MJDW, GHYT, DJLX, FWXZ, 
+      BDCDYH, SYQXZ, FDCJYJG, DJJG, 
+      QLRZJZL, DJXL, ZCS, DJBZT, 
+      QLLX, DBR, FWJG, SZCS, 
+      FWSUOYQLR, QXDM, FTTDMJ, 
+      DYTDMJ, DJSJ, BDCQZH, FDZL, 
+      FTJZMJ, ZYJZMJ, JZMJ, FJ, 
+      BZ, QLRLX, GYQK, QLRZJBH, 
+      DJYY, TDSHIYQR, SYQXQ, SJHQBS, 
+      SJHQSJ, HOUSE_ID, FOUR_CODE, 
+      OLDSLID, BDCLX, QLXZ, YSLH, 
+      YZSH, CQLY, GLQY, TDDBSJ, 
+      TDDBR, TDCQZH, DBYJ, DBYJQZ, 
+      DJJGDM, DJJGMC, TDZH, 
+      QSXZ, TDYT, TDFZRQ, QDFS, 
+      TDSYQMJ, JYRQ, JGND, ZBK_RECEIVENO, 
+      ZJF_AFSSJCLZT, ZJF_SJXGNAME, ZJF_SJXGJILU, 
+      YWR, YWRZJBH, ZJF_DAH, ZJF_BDCQZH, 
+      ZJF_FDZL, ZJF_QLR, ZJF_QLRZJBH, 
+      ZJF_SJBLLU, GID, ZYFGHBBS, 
+      FWXZMC, JGSJ, CZHQBS, 
+      CZHQSJ, BDCDYH1, PZYT, SJYT, 
+      YTMC, SYQQX, JEDW, FZHJ, 
+      ZDDM, BDCDYH2, XGBJ, FCTSBS
+      )
+    values (#{djkid,jdbcType=OTHER}, #{oid,jdbcType=DECIMAL}, #{slid,jdbcType=CHAR}, 
+      #{mjdw,jdbcType=DECIMAL}, #{ghyt,jdbcType=OTHER}, #{djlx,jdbcType=OTHER}, #{fwxz,jdbcType=OTHER}, 
+      #{bdcdyh,jdbcType=OTHER}, #{syqxz,jdbcType=DATE}, #{fdcjyjg,jdbcType=FLOAT}, #{djjg,jdbcType=OTHER}, 
+      #{qlrzjzl,jdbcType=DECIMAL}, #{djxl,jdbcType=OTHER}, #{zcs,jdbcType=DECIMAL}, #{djbzt,jdbcType=OTHER}, 
+      #{qllx,jdbcType=OTHER}, #{dbr,jdbcType=OTHER}, #{fwjg,jdbcType=DECIMAL}, #{szcs,jdbcType=OTHER}, 
+      #{fwsuoyqlr,jdbcType=OTHER}, #{qxdm,jdbcType=OTHER}, #{fttdmj,jdbcType=FLOAT}, 
+      #{dytdmj,jdbcType=FLOAT}, #{djsj,jdbcType=DATE}, #{bdcqzh,jdbcType=OTHER}, #{fdzl,jdbcType=OTHER}, 
+      #{ftjzmj,jdbcType=FLOAT}, #{zyjzmj,jdbcType=FLOAT}, #{jzmj,jdbcType=FLOAT}, #{fj,jdbcType=OTHER}, 
+      #{bz,jdbcType=OTHER}, #{qlrlx,jdbcType=OTHER}, #{gyqk,jdbcType=OTHER}, #{qlrzjbh,jdbcType=OTHER}, 
+      #{djyy,jdbcType=OTHER}, #{tdshiyqr,jdbcType=OTHER}, #{syqxq,jdbcType=DATE}, #{sjhqbs,jdbcType=DECIMAL}, 
+      #{sjhqsj,jdbcType=DATE}, #{houseId,jdbcType=OTHER}, #{fourCode,jdbcType=OTHER}, 
+      #{oldslid,jdbcType=OTHER}, #{bdclx,jdbcType=DECIMAL}, #{qlxz,jdbcType=OTHER}, #{yslh,jdbcType=CHAR}, 
+      #{yzsh,jdbcType=OTHER}, #{cqly,jdbcType=DECIMAL}, #{glqy,jdbcType=OTHER}, #{tddbsj,jdbcType=DATE}, 
+      #{tddbr,jdbcType=OTHER}, #{tdcqzh,jdbcType=OTHER}, #{dbyj,jdbcType=OTHER}, #{dbyjqz,jdbcType=OTHER}, 
+      #{djjgdm,jdbcType=VARCHAR}, #{djjgmc,jdbcType=VARCHAR}, #{tdzh,jdbcType=OTHER}, 
+      #{qsxz,jdbcType=OTHER}, #{tdyt,jdbcType=OTHER}, #{tdfzrq,jdbcType=DATE}, #{qdfs,jdbcType=OTHER}, 
+      #{tdsyqmj,jdbcType=DECIMAL}, #{jyrq,jdbcType=DATE}, #{jgnd,jdbcType=OTHER}, #{zbkReceiveno,jdbcType=OTHER}, 
+      #{zjfAfssjclzt,jdbcType=OTHER}, #{zjfSjxgname,jdbcType=OTHER}, #{zjfSjxgjilu,jdbcType=OTHER}, 
+      #{ywr,jdbcType=OTHER}, #{ywrzjbh,jdbcType=OTHER}, #{zjfDah,jdbcType=OTHER}, #{zjfBdcqzh,jdbcType=OTHER}, 
+      #{zjfFdzl,jdbcType=OTHER}, #{zjfQlr,jdbcType=OTHER}, #{zjfQlrzjbh,jdbcType=OTHER}, 
+      #{zjfSjbllu,jdbcType=OTHER}, #{gid,jdbcType=VARCHAR}, #{zyfghbbs,jdbcType=DECIMAL}, 
+      #{fwxzmc,jdbcType=VARCHAR}, #{jgsj,jdbcType=VARCHAR}, #{czhqbs,jdbcType=DECIMAL}, 
+      #{czhqsj,jdbcType=DATE}, #{bdcdyh1,jdbcType=OTHER}, #{pzyt,jdbcType=OTHER}, #{sjyt,jdbcType=OTHER}, 
+      #{ytmc,jdbcType=OTHER}, #{syqqx,jdbcType=OTHER}, #{jedw,jdbcType=OTHER}, #{fzhj,jdbcType=OTHER}, 
+      #{zddm,jdbcType=OTHER}, #{bdcdyh2,jdbcType=OTHER}, #{xgbj,jdbcType=OTHER}, #{fctsbs,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectByDate" resultType="java.lang.String">
+    select sysdate
+    from dual
+  </select>
+  <insert id="insertSelective" parameterType="com.jyq.po.BdcRegnFwsyq">
+    insert into BDC_REGN_FWSYQ
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="djkid != null">
+        DJKID,
+      </if>
+      <if test="oid != null">
+        OID,
+      </if>
+      <if test="slid != null">
+        SLID,
+      </if>
+      <if test="mjdw != null">
+        MJDW,
+      </if>
+      <if test="ghyt != null">
+        GHYT,
+      </if>
+      <if test="djlx != null">
+        DJLX,
+      </if>
+      <if test="fwxz != null">
+        FWXZ,
+      </if>
+      <if test="bdcdyh != null">
+        BDCDYH,
+      </if>
+      <if test="syqxz != null">
+        SYQXZ,
+      </if>
+      <if test="fdcjyjg != null">
+        FDCJYJG,
+      </if>
+      <if test="djjg != null">
+        DJJG,
+      </if>
+      <if test="qlrzjzl != null">
+        QLRZJZL,
+      </if>
+      <if test="djxl != null">
+        DJXL,
+      </if>
+      <if test="zcs != null">
+        ZCS,
+      </if>
+      <if test="djbzt != null">
+        DJBZT,
+      </if>
+      <if test="qllx != null">
+        QLLX,
+      </if>
+      <if test="dbr != null">
+        DBR,
+      </if>
+      <if test="fwjg != null">
+        FWJG,
+      </if>
+      <if test="szcs != null">
+        SZCS,
+      </if>
+      <if test="fwsuoyqlr != null">
+        FWSUOYQLR,
+      </if>
+      <if test="qxdm != null">
+        QXDM,
+      </if>
+      <if test="fttdmj != null">
+        FTTDMJ,
+      </if>
+      <if test="dytdmj != null">
+        DYTDMJ,
+      </if>
+      <if test="djsj != null">
+        DJSJ,
+      </if>
+      <if test="bdcqzh != null">
+        BDCQZH,
+      </if>
+      <if test="fdzl != null">
+        FDZL,
+      </if>
+      <if test="ftjzmj != null">
+        FTJZMJ,
+      </if>
+      <if test="zyjzmj != null">
+        ZYJZMJ,
+      </if>
+      <if test="jzmj != null">
+        JZMJ,
+      </if>
+      <if test="fj != null">
+        FJ,
+      </if>
+      <if test="bz != null">
+        BZ,
+      </if>
+      <if test="qlrlx != null">
+        QLRLX,
+      </if>
+      <if test="gyqk != null">
+        GYQK,
+      </if>
+      <if test="qlrzjbh != null">
+        QLRZJBH,
+      </if>
+      <if test="djyy != null">
+        DJYY,
+      </if>
+      <if test="tdshiyqr != null">
+        TDSHIYQR,
+      </if>
+      <if test="syqxq != null">
+        SYQXQ,
+      </if>
+      <if test="sjhqbs != null">
+        SJHQBS,
+      </if>
+      <if test="sjhqsj != null">
+        SJHQSJ,
+      </if>
+      <if test="houseId != null">
+        HOUSE_ID,
+      </if>
+      <if test="fourCode != null">
+        FOUR_CODE,
+      </if>
+      <if test="oldslid != null">
+        OLDSLID,
+      </if>
+      <if test="bdclx != null">
+        BDCLX,
+      </if>
+      <if test="qlxz != null">
+        QLXZ,
+      </if>
+      <if test="yslh != null">
+        YSLH,
+      </if>
+      <if test="yzsh != null">
+        YZSH,
+      </if>
+      <if test="cqly != null">
+        CQLY,
+      </if>
+      <if test="glqy != null">
+        GLQY,
+      </if>
+      <if test="tddbsj != null">
+        TDDBSJ,
+      </if>
+      <if test="tddbr != null">
+        TDDBR,
+      </if>
+      <if test="tdcqzh != null">
+        TDCQZH,
+      </if>
+      <if test="dbyj != null">
+        DBYJ,
+      </if>
+      <if test="dbyjqz != null">
+        DBYJQZ,
+      </if>
+      <if test="djjgdm != null">
+        DJJGDM,
+      </if>
+      <if test="djjgmc != null">
+        DJJGMC,
+      </if>
+      <if test="tdzh != null">
+        TDZH,
+      </if>
+      <if test="qsxz != null">
+        QSXZ,
+      </if>
+      <if test="tdyt != null">
+        TDYT,
+      </if>
+      <if test="tdfzrq != null">
+        TDFZRQ,
+      </if>
+      <if test="qdfs != null">
+        QDFS,
+      </if>
+      <if test="tdsyqmj != null">
+        TDSYQMJ,
+      </if>
+      <if test="jyrq != null">
+        JYRQ,
+      </if>
+      <if test="jgnd != null">
+        JGND,
+      </if>
+      <if test="zbkReceiveno != null">
+        ZBK_RECEIVENO,
+      </if>
+      <if test="zjfAfssjclzt != null">
+        ZJF_AFSSJCLZT,
+      </if>
+      <if test="zjfSjxgname != null">
+        ZJF_SJXGNAME,
+      </if>
+      <if test="zjfSjxgjilu != null">
+        ZJF_SJXGJILU,
+      </if>
+      <if test="ywr != null">
+        YWR,
+      </if>
+      <if test="ywrzjbh != null">
+        YWRZJBH,
+      </if>
+      <if test="zjfDah != null">
+        ZJF_DAH,
+      </if>
+      <if test="zjfBdcqzh != null">
+        ZJF_BDCQZH,
+      </if>
+      <if test="zjfFdzl != null">
+        ZJF_FDZL,
+      </if>
+      <if test="zjfQlr != null">
+        ZJF_QLR,
+      </if>
+      <if test="zjfQlrzjbh != null">
+        ZJF_QLRZJBH,
+      </if>
+      <if test="zjfSjbllu != null">
+        ZJF_SJBLLU,
+      </if>
+      <if test="gid != null">
+        GID,
+      </if>
+      <if test="zyfghbbs != null">
+        ZYFGHBBS,
+      </if>
+      <if test="fwxzmc != null">
+        FWXZMC,
+      </if>
+      <if test="jgsj != null">
+        JGSJ,
+      </if>
+      <if test="czhqbs != null">
+        CZHQBS,
+      </if>
+      <if test="czhqsj != null">
+        CZHQSJ,
+      </if>
+      <if test="bdcdyh1 != null">
+        BDCDYH1,
+      </if>
+      <if test="pzyt != null">
+        PZYT,
+      </if>
+      <if test="sjyt != null">
+        SJYT,
+      </if>
+      <if test="ytmc != null">
+        YTMC,
+      </if>
+      <if test="syqqx != null">
+        SYQQX,
+      </if>
+      <if test="jedw != null">
+        JEDW,
+      </if>
+      <if test="fzhj != null">
+        FZHJ,
+      </if>
+      <if test="zddm != null">
+        ZDDM,
+      </if>
+      <if test="bdcdyh2 != null">
+        BDCDYH2,
+      </if>
+      <if test="xgbj != null">
+        XGBJ,
+      </if>
+      <if test="fctsbs != null">
+        FCTSBS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="djkid != null">
+        #{djkid,jdbcType=OTHER},
+      </if>
+      <if test="oid != null">
+        #{oid,jdbcType=DECIMAL},
+      </if>
+      <if test="slid != null">
+        #{slid,jdbcType=CHAR},
+      </if>
+      <if test="mjdw != null">
+        #{mjdw,jdbcType=DECIMAL},
+      </if>
+      <if test="ghyt != null">
+        #{ghyt,jdbcType=OTHER},
+      </if>
+      <if test="djlx != null">
+        #{djlx,jdbcType=OTHER},
+      </if>
+      <if test="fwxz != null">
+        #{fwxz,jdbcType=OTHER},
+      </if>
+      <if test="bdcdyh != null">
+        #{bdcdyh,jdbcType=OTHER},
+      </if>
+      <if test="syqxz != null">
+        #{syqxz,jdbcType=DATE},
+      </if>
+      <if test="fdcjyjg != null">
+        #{fdcjyjg,jdbcType=FLOAT},
+      </if>
+      <if test="djjg != null">
+        #{djjg,jdbcType=OTHER},
+      </if>
+      <if test="qlrzjzl != null">
+        #{qlrzjzl,jdbcType=DECIMAL},
+      </if>
+      <if test="djxl != null">
+        #{djxl,jdbcType=OTHER},
+      </if>
+      <if test="zcs != null">
+        #{zcs,jdbcType=DECIMAL},
+      </if>
+      <if test="djbzt != null">
+        #{djbzt,jdbcType=OTHER},
+      </if>
+      <if test="qllx != null">
+        #{qllx,jdbcType=OTHER},
+      </if>
+      <if test="dbr != null">
+        #{dbr,jdbcType=OTHER},
+      </if>
+      <if test="fwjg != null">
+        #{fwjg,jdbcType=DECIMAL},
+      </if>
+      <if test="szcs != null">
+        #{szcs,jdbcType=OTHER},
+      </if>
+      <if test="fwsuoyqlr != null">
+        #{fwsuoyqlr,jdbcType=OTHER},
+      </if>
+      <if test="qxdm != null">
+        #{qxdm,jdbcType=OTHER},
+      </if>
+      <if test="fttdmj != null">
+        #{fttdmj,jdbcType=FLOAT},
+      </if>
+      <if test="dytdmj != null">
+        #{dytdmj,jdbcType=FLOAT},
+      </if>
+      <if test="djsj != null">
+        #{djsj,jdbcType=DATE},
+      </if>
+      <if test="bdcqzh != null">
+        #{bdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="fdzl != null">
+        #{fdzl,jdbcType=OTHER},
+      </if>
+      <if test="ftjzmj != null">
+        #{ftjzmj,jdbcType=FLOAT},
+      </if>
+      <if test="zyjzmj != null">
+        #{zyjzmj,jdbcType=FLOAT},
+      </if>
+      <if test="jzmj != null">
+        #{jzmj,jdbcType=FLOAT},
+      </if>
+      <if test="fj != null">
+        #{fj,jdbcType=OTHER},
+      </if>
+      <if test="bz != null">
+        #{bz,jdbcType=OTHER},
+      </if>
+      <if test="qlrlx != null">
+        #{qlrlx,jdbcType=OTHER},
+      </if>
+      <if test="gyqk != null">
+        #{gyqk,jdbcType=OTHER},
+      </if>
+      <if test="qlrzjbh != null">
+        #{qlrzjbh,jdbcType=OTHER},
+      </if>
+      <if test="djyy != null">
+        #{djyy,jdbcType=OTHER},
+      </if>
+      <if test="tdshiyqr != null">
+        #{tdshiyqr,jdbcType=OTHER},
+      </if>
+      <if test="syqxq != null">
+        #{syqxq,jdbcType=DATE},
+      </if>
+      <if test="sjhqbs != null">
+        #{sjhqbs,jdbcType=DECIMAL},
+      </if>
+      <if test="sjhqsj != null">
+        #{sjhqsj,jdbcType=DATE},
+      </if>
+      <if test="houseId != null">
+        #{houseId,jdbcType=OTHER},
+      </if>
+      <if test="fourCode != null">
+        #{fourCode,jdbcType=OTHER},
+      </if>
+      <if test="oldslid != null">
+        #{oldslid,jdbcType=OTHER},
+      </if>
+      <if test="bdclx != null">
+        #{bdclx,jdbcType=DECIMAL},
+      </if>
+      <if test="qlxz != null">
+        #{qlxz,jdbcType=OTHER},
+      </if>
+      <if test="yslh != null">
+        #{yslh,jdbcType=CHAR},
+      </if>
+      <if test="yzsh != null">
+        #{yzsh,jdbcType=OTHER},
+      </if>
+      <if test="cqly != null">
+        #{cqly,jdbcType=DECIMAL},
+      </if>
+      <if test="glqy != null">
+        #{glqy,jdbcType=OTHER},
+      </if>
+      <if test="tddbsj != null">
+        #{tddbsj,jdbcType=DATE},
+      </if>
+      <if test="tddbr != null">
+        #{tddbr,jdbcType=OTHER},
+      </if>
+      <if test="tdcqzh != null">
+        #{tdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="dbyj != null">
+        #{dbyj,jdbcType=OTHER},
+      </if>
+      <if test="dbyjqz != null">
+        #{dbyjqz,jdbcType=OTHER},
+      </if>
+      <if test="djjgdm != null">
+        #{djjgdm,jdbcType=VARCHAR},
+      </if>
+      <if test="djjgmc != null">
+        #{djjgmc,jdbcType=VARCHAR},
+      </if>
+      <if test="tdzh != null">
+        #{tdzh,jdbcType=OTHER},
+      </if>
+      <if test="qsxz != null">
+        #{qsxz,jdbcType=OTHER},
+      </if>
+      <if test="tdyt != null">
+        #{tdyt,jdbcType=OTHER},
+      </if>
+      <if test="tdfzrq != null">
+        #{tdfzrq,jdbcType=DATE},
+      </if>
+      <if test="qdfs != null">
+        #{qdfs,jdbcType=OTHER},
+      </if>
+      <if test="tdsyqmj != null">
+        #{tdsyqmj,jdbcType=DECIMAL},
+      </if>
+      <if test="jyrq != null">
+        #{jyrq,jdbcType=DATE},
+      </if>
+      <if test="jgnd != null">
+        #{jgnd,jdbcType=OTHER},
+      </if>
+      <if test="zbkReceiveno != null">
+        #{zbkReceiveno,jdbcType=OTHER},
+      </if>
+      <if test="zjfAfssjclzt != null">
+        #{zjfAfssjclzt,jdbcType=OTHER},
+      </if>
+      <if test="zjfSjxgname != null">
+        #{zjfSjxgname,jdbcType=OTHER},
+      </if>
+      <if test="zjfSjxgjilu != null">
+        #{zjfSjxgjilu,jdbcType=OTHER},
+      </if>
+      <if test="ywr != null">
+        #{ywr,jdbcType=OTHER},
+      </if>
+      <if test="ywrzjbh != null">
+        #{ywrzjbh,jdbcType=OTHER},
+      </if>
+      <if test="zjfDah != null">
+        #{zjfDah,jdbcType=OTHER},
+      </if>
+      <if test="zjfBdcqzh != null">
+        #{zjfBdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="zjfFdzl != null">
+        #{zjfFdzl,jdbcType=OTHER},
+      </if>
+      <if test="zjfQlr != null">
+        #{zjfQlr,jdbcType=OTHER},
+      </if>
+      <if test="zjfQlrzjbh != null">
+        #{zjfQlrzjbh,jdbcType=OTHER},
+      </if>
+      <if test="zjfSjbllu != null">
+        #{zjfSjbllu,jdbcType=OTHER},
+      </if>
+      <if test="gid != null">
+        #{gid,jdbcType=VARCHAR},
+      </if>
+      <if test="zyfghbbs != null">
+        #{zyfghbbs,jdbcType=DECIMAL},
+      </if>
+      <if test="fwxzmc != null">
+        #{fwxzmc,jdbcType=VARCHAR},
+      </if>
+      <if test="jgsj != null">
+        #{jgsj,jdbcType=VARCHAR},
+      </if>
+      <if test="czhqbs != null">
+        #{czhqbs,jdbcType=DECIMAL},
+      </if>
+      <if test="czhqsj != null">
+        #{czhqsj,jdbcType=DATE},
+      </if>
+      <if test="bdcdyh1 != null">
+        #{bdcdyh1,jdbcType=OTHER},
+      </if>
+      <if test="pzyt != null">
+        #{pzyt,jdbcType=OTHER},
+      </if>
+      <if test="sjyt != null">
+        #{sjyt,jdbcType=OTHER},
+      </if>
+      <if test="ytmc != null">
+        #{ytmc,jdbcType=OTHER},
+      </if>
+      <if test="syqqx != null">
+        #{syqqx,jdbcType=OTHER},
+      </if>
+      <if test="jedw != null">
+        #{jedw,jdbcType=OTHER},
+      </if>
+      <if test="fzhj != null">
+        #{fzhj,jdbcType=OTHER},
+      </if>
+      <if test="zddm != null">
+        #{zddm,jdbcType=OTHER},
+      </if>
+      <if test="bdcdyh2 != null">
+        #{bdcdyh2,jdbcType=OTHER},
+      </if>
+      <if test="xgbj != null">
+        #{xgbj,jdbcType=OTHER},
+      </if>
+      <if test="fctsbs != null">
+        #{fctsbs,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jyq.po.BdcRegnFwsyq">
+    update BDC_REGN_FWSYQ
+    <set>
+      <if test="slid != null">
+        SLID = #{slid,jdbcType=CHAR},
+      </if>
+      <if test="mjdw != null">
+        MJDW = #{mjdw,jdbcType=DECIMAL},
+      </if>
+      <if test="ghyt != null">
+        GHYT = #{ghyt,jdbcType=OTHER},
+      </if>
+      <if test="djlx != null">
+        DJLX = #{djlx,jdbcType=OTHER},
+      </if>
+      <if test="fwxz != null">
+        FWXZ = #{fwxz,jdbcType=OTHER},
+      </if>
+      <if test="bdcdyh != null">
+        BDCDYH = #{bdcdyh,jdbcType=OTHER},
+      </if>
+      <if test="syqxz != null">
+        SYQXZ = #{syqxz,jdbcType=DATE},
+      </if>
+      <if test="fdcjyjg != null">
+        FDCJYJG = #{fdcjyjg,jdbcType=FLOAT},
+      </if>
+      <if test="djjg != null">
+        DJJG = #{djjg,jdbcType=OTHER},
+      </if>
+      <if test="qlrzjzl != null">
+        QLRZJZL = #{qlrzjzl,jdbcType=DECIMAL},
+      </if>
+      <if test="djxl != null">
+        DJXL = #{djxl,jdbcType=OTHER},
+      </if>
+      <if test="zcs != null">
+        ZCS = #{zcs,jdbcType=DECIMAL},
+      </if>
+      <if test="djbzt != null">
+        DJBZT = #{djbzt,jdbcType=OTHER},
+      </if>
+      <if test="qllx != null">
+        QLLX = #{qllx,jdbcType=OTHER},
+      </if>
+      <if test="dbr != null">
+        DBR = #{dbr,jdbcType=OTHER},
+      </if>
+      <if test="fwjg != null">
+        FWJG = #{fwjg,jdbcType=DECIMAL},
+      </if>
+      <if test="szcs != null">
+        SZCS = #{szcs,jdbcType=OTHER},
+      </if>
+      <if test="fwsuoyqlr != null">
+        FWSUOYQLR = #{fwsuoyqlr,jdbcType=OTHER},
+      </if>
+      <if test="qxdm != null">
+        QXDM = #{qxdm,jdbcType=OTHER},
+      </if>
+      <if test="fttdmj != null">
+        FTTDMJ = #{fttdmj,jdbcType=FLOAT},
+      </if>
+      <if test="dytdmj != null">
+        DYTDMJ = #{dytdmj,jdbcType=FLOAT},
+      </if>
+      <if test="djsj != null">
+        DJSJ = #{djsj,jdbcType=DATE},
+      </if>
+      <if test="bdcqzh != null">
+        BDCQZH = #{bdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="fdzl != null">
+        FDZL = #{fdzl,jdbcType=OTHER},
+      </if>
+      <if test="ftjzmj != null">
+        FTJZMJ = #{ftjzmj,jdbcType=FLOAT},
+      </if>
+      <if test="zyjzmj != null">
+        ZYJZMJ = #{zyjzmj,jdbcType=FLOAT},
+      </if>
+      <if test="jzmj != null">
+        JZMJ = #{jzmj,jdbcType=FLOAT},
+      </if>
+      <if test="fj != null">
+        FJ = #{fj,jdbcType=OTHER},
+      </if>
+      <if test="bz != null">
+        BZ = #{bz,jdbcType=OTHER},
+      </if>
+      <if test="qlrlx != null">
+        QLRLX = #{qlrlx,jdbcType=OTHER},
+      </if>
+      <if test="gyqk != null">
+        GYQK = #{gyqk,jdbcType=OTHER},
+      </if>
+      <if test="qlrzjbh != null">
+        QLRZJBH = #{qlrzjbh,jdbcType=OTHER},
+      </if>
+      <if test="djyy != null">
+        DJYY = #{djyy,jdbcType=OTHER},
+      </if>
+      <if test="tdshiyqr != null">
+        TDSHIYQR = #{tdshiyqr,jdbcType=OTHER},
+      </if>
+      <if test="syqxq != null">
+        SYQXQ = #{syqxq,jdbcType=DATE},
+      </if>
+      <if test="sjhqbs != null">
+        SJHQBS = #{sjhqbs,jdbcType=DECIMAL},
+      </if>
+      <if test="sjhqsj != null">
+        SJHQSJ = #{sjhqsj,jdbcType=DATE},
+      </if>
+      <if test="houseId != null">
+        HOUSE_ID = #{houseId,jdbcType=OTHER},
+      </if>
+      <if test="fourCode != null">
+        FOUR_CODE = #{fourCode,jdbcType=OTHER},
+      </if>
+      <if test="oldslid != null">
+        OLDSLID = #{oldslid,jdbcType=OTHER},
+      </if>
+      <if test="bdclx != null">
+        BDCLX = #{bdclx,jdbcType=DECIMAL},
+      </if>
+      <if test="qlxz != null">
+        QLXZ = #{qlxz,jdbcType=OTHER},
+      </if>
+      <if test="yslh != null">
+        YSLH = #{yslh,jdbcType=CHAR},
+      </if>
+      <if test="yzsh != null">
+        YZSH = #{yzsh,jdbcType=OTHER},
+      </if>
+      <if test="cqly != null">
+        CQLY = #{cqly,jdbcType=DECIMAL},
+      </if>
+      <if test="glqy != null">
+        GLQY = #{glqy,jdbcType=OTHER},
+      </if>
+      <if test="tddbsj != null">
+        TDDBSJ = #{tddbsj,jdbcType=DATE},
+      </if>
+      <if test="tddbr != null">
+        TDDBR = #{tddbr,jdbcType=OTHER},
+      </if>
+      <if test="tdcqzh != null">
+        TDCQZH = #{tdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="dbyj != null">
+        DBYJ = #{dbyj,jdbcType=OTHER},
+      </if>
+      <if test="dbyjqz != null">
+        DBYJQZ = #{dbyjqz,jdbcType=OTHER},
+      </if>
+      <if test="djjgdm != null">
+        DJJGDM = #{djjgdm,jdbcType=VARCHAR},
+      </if>
+      <if test="djjgmc != null">
+        DJJGMC = #{djjgmc,jdbcType=VARCHAR},
+      </if>
+      <if test="tdzh != null">
+        TDZH = #{tdzh,jdbcType=OTHER},
+      </if>
+      <if test="qsxz != null">
+        QSXZ = #{qsxz,jdbcType=OTHER},
+      </if>
+      <if test="tdyt != null">
+        TDYT = #{tdyt,jdbcType=OTHER},
+      </if>
+      <if test="tdfzrq != null">
+        TDFZRQ = #{tdfzrq,jdbcType=DATE},
+      </if>
+      <if test="qdfs != null">
+        QDFS = #{qdfs,jdbcType=OTHER},
+      </if>
+      <if test="tdsyqmj != null">
+        TDSYQMJ = #{tdsyqmj,jdbcType=DECIMAL},
+      </if>
+      <if test="jyrq != null">
+        JYRQ = #{jyrq,jdbcType=DATE},
+      </if>
+      <if test="jgnd != null">
+        JGND = #{jgnd,jdbcType=OTHER},
+      </if>
+      <if test="zbkReceiveno != null">
+        ZBK_RECEIVENO = #{zbkReceiveno,jdbcType=OTHER},
+      </if>
+      <if test="zjfAfssjclzt != null">
+        ZJF_AFSSJCLZT = #{zjfAfssjclzt,jdbcType=OTHER},
+      </if>
+      <if test="zjfSjxgname != null">
+        ZJF_SJXGNAME = #{zjfSjxgname,jdbcType=OTHER},
+      </if>
+      <if test="zjfSjxgjilu != null">
+        ZJF_SJXGJILU = #{zjfSjxgjilu,jdbcType=OTHER},
+      </if>
+      <if test="ywr != null">
+        YWR = #{ywr,jdbcType=OTHER},
+      </if>
+      <if test="ywrzjbh != null">
+        YWRZJBH = #{ywrzjbh,jdbcType=OTHER},
+      </if>
+      <if test="zjfDah != null">
+        ZJF_DAH = #{zjfDah,jdbcType=OTHER},
+      </if>
+      <if test="zjfBdcqzh != null">
+        ZJF_BDCQZH = #{zjfBdcqzh,jdbcType=OTHER},
+      </if>
+      <if test="zjfFdzl != null">
+        ZJF_FDZL = #{zjfFdzl,jdbcType=OTHER},
+      </if>
+      <if test="zjfQlr != null">
+        ZJF_QLR = #{zjfQlr,jdbcType=OTHER},
+      </if>
+      <if test="zjfQlrzjbh != null">
+        ZJF_QLRZJBH = #{zjfQlrzjbh,jdbcType=OTHER},
+      </if>
+      <if test="zjfSjbllu != null">
+        ZJF_SJBLLU = #{zjfSjbllu,jdbcType=OTHER},
+      </if>
+      <if test="gid != null">
+        GID = #{gid,jdbcType=VARCHAR},
+      </if>
+      <if test="zyfghbbs != null">
+        ZYFGHBBS = #{zyfghbbs,jdbcType=DECIMAL},
+      </if>
+      <if test="fwxzmc != null">
+        FWXZMC = #{fwxzmc,jdbcType=VARCHAR},
+      </if>
+      <if test="jgsj != null">
+        JGSJ = #{jgsj,jdbcType=VARCHAR},
+      </if>
+      <if test="czhqbs != null">
+        CZHQBS = #{czhqbs,jdbcType=DECIMAL},
+      </if>
+      <if test="czhqsj != null">
+        CZHQSJ = #{czhqsj,jdbcType=DATE},
+      </if>
+      <if test="bdcdyh1 != null">
+        BDCDYH1 = #{bdcdyh1,jdbcType=OTHER},
+      </if>
+      <if test="pzyt != null">
+        PZYT = #{pzyt,jdbcType=OTHER},
+      </if>
+      <if test="sjyt != null">
+        SJYT = #{sjyt,jdbcType=OTHER},
+      </if>
+      <if test="ytmc != null">
+        YTMC = #{ytmc,jdbcType=OTHER},
+      </if>
+      <if test="syqqx != null">
+        SYQQX = #{syqqx,jdbcType=OTHER},
+      </if>
+      <if test="jedw != null">
+        JEDW = #{jedw,jdbcType=OTHER},
+      </if>
+      <if test="fzhj != null">
+        FZHJ = #{fzhj,jdbcType=OTHER},
+      </if>
+      <if test="zddm != null">
+        ZDDM = #{zddm,jdbcType=OTHER},
+      </if>
+      <if test="bdcdyh2 != null">
+        BDCDYH2 = #{bdcdyh2,jdbcType=OTHER},
+      </if>
+      <if test="xgbj != null">
+        XGBJ = #{xgbj,jdbcType=OTHER},
+      </if>
+      <if test="fctsbs != null">
+        FCTSBS = #{fctsbs,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where DJKID = #{djkid,jdbcType=OTHER}
+      and OID = #{oid,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jyq.po.BdcRegnFwsyq">
+    update BDC_REGN_FWSYQ
+    set SLID = #{slid,jdbcType=CHAR},
+      MJDW = #{mjdw,jdbcType=DECIMAL},
+      GHYT = #{ghyt,jdbcType=OTHER},
+      DJLX = #{djlx,jdbcType=OTHER},
+      FWXZ = #{fwxz,jdbcType=OTHER},
+      BDCDYH = #{bdcdyh,jdbcType=OTHER},
+      SYQXZ = #{syqxz,jdbcType=DATE},
+      FDCJYJG = #{fdcjyjg,jdbcType=FLOAT},
+      DJJG = #{djjg,jdbcType=OTHER},
+      QLRZJZL = #{qlrzjzl,jdbcType=DECIMAL},
+      DJXL = #{djxl,jdbcType=OTHER},
+      ZCS = #{zcs,jdbcType=DECIMAL},
+      DJBZT = #{djbzt,jdbcType=OTHER},
+      QLLX = #{qllx,jdbcType=OTHER},
+      DBR = #{dbr,jdbcType=OTHER},
+      FWJG = #{fwjg,jdbcType=DECIMAL},
+      SZCS = #{szcs,jdbcType=OTHER},
+      FWSUOYQLR = #{fwsuoyqlr,jdbcType=OTHER},
+      QXDM = #{qxdm,jdbcType=OTHER},
+      FTTDMJ = #{fttdmj,jdbcType=FLOAT},
+      DYTDMJ = #{dytdmj,jdbcType=FLOAT},
+      DJSJ = #{djsj,jdbcType=DATE},
+      BDCQZH = #{bdcqzh,jdbcType=OTHER},
+      FDZL = #{fdzl,jdbcType=OTHER},
+      FTJZMJ = #{ftjzmj,jdbcType=FLOAT},
+      ZYJZMJ = #{zyjzmj,jdbcType=FLOAT},
+      JZMJ = #{jzmj,jdbcType=FLOAT},
+      FJ = #{fj,jdbcType=OTHER},
+      BZ = #{bz,jdbcType=OTHER},
+      QLRLX = #{qlrlx,jdbcType=OTHER},
+      GYQK = #{gyqk,jdbcType=OTHER},
+      QLRZJBH = #{qlrzjbh,jdbcType=OTHER},
+      DJYY = #{djyy,jdbcType=OTHER},
+      TDSHIYQR = #{tdshiyqr,jdbcType=OTHER},
+      SYQXQ = #{syqxq,jdbcType=DATE},
+      SJHQBS = #{sjhqbs,jdbcType=DECIMAL},
+      SJHQSJ = #{sjhqsj,jdbcType=DATE},
+      HOUSE_ID = #{houseId,jdbcType=OTHER},
+      FOUR_CODE = #{fourCode,jdbcType=OTHER},
+      OLDSLID = #{oldslid,jdbcType=OTHER},
+      BDCLX = #{bdclx,jdbcType=DECIMAL},
+      QLXZ = #{qlxz,jdbcType=OTHER},
+      YSLH = #{yslh,jdbcType=CHAR},
+      YZSH = #{yzsh,jdbcType=OTHER},
+      CQLY = #{cqly,jdbcType=DECIMAL},
+      GLQY = #{glqy,jdbcType=OTHER},
+      TDDBSJ = #{tddbsj,jdbcType=DATE},
+      TDDBR = #{tddbr,jdbcType=OTHER},
+      TDCQZH = #{tdcqzh,jdbcType=OTHER},
+      DBYJ = #{dbyj,jdbcType=OTHER},
+      DBYJQZ = #{dbyjqz,jdbcType=OTHER},
+      DJJGDM = #{djjgdm,jdbcType=VARCHAR},
+      DJJGMC = #{djjgmc,jdbcType=VARCHAR},
+      TDZH = #{tdzh,jdbcType=OTHER},
+      QSXZ = #{qsxz,jdbcType=OTHER},
+      TDYT = #{tdyt,jdbcType=OTHER},
+      TDFZRQ = #{tdfzrq,jdbcType=DATE},
+      QDFS = #{qdfs,jdbcType=OTHER},
+      TDSYQMJ = #{tdsyqmj,jdbcType=DECIMAL},
+      JYRQ = #{jyrq,jdbcType=DATE},
+      JGND = #{jgnd,jdbcType=OTHER},
+      ZBK_RECEIVENO = #{zbkReceiveno,jdbcType=OTHER},
+      ZJF_AFSSJCLZT = #{zjfAfssjclzt,jdbcType=OTHER},
+      ZJF_SJXGNAME = #{zjfSjxgname,jdbcType=OTHER},
+      ZJF_SJXGJILU = #{zjfSjxgjilu,jdbcType=OTHER},
+      YWR = #{ywr,jdbcType=OTHER},
+      YWRZJBH = #{ywrzjbh,jdbcType=OTHER},
+      ZJF_DAH = #{zjfDah,jdbcType=OTHER},
+      ZJF_BDCQZH = #{zjfBdcqzh,jdbcType=OTHER},
+      ZJF_FDZL = #{zjfFdzl,jdbcType=OTHER},
+      ZJF_QLR = #{zjfQlr,jdbcType=OTHER},
+      ZJF_QLRZJBH = #{zjfQlrzjbh,jdbcType=OTHER},
+      ZJF_SJBLLU = #{zjfSjbllu,jdbcType=OTHER},
+      GID = #{gid,jdbcType=VARCHAR},
+      ZYFGHBBS = #{zyfghbbs,jdbcType=DECIMAL},
+      FWXZMC = #{fwxzmc,jdbcType=VARCHAR},
+      JGSJ = #{jgsj,jdbcType=VARCHAR},
+      CZHQBS = #{czhqbs,jdbcType=DECIMAL},
+      CZHQSJ = #{czhqsj,jdbcType=DATE},
+      BDCDYH1 = #{bdcdyh1,jdbcType=OTHER},
+      PZYT = #{pzyt,jdbcType=OTHER},
+      SJYT = #{sjyt,jdbcType=OTHER},
+      YTMC = #{ytmc,jdbcType=OTHER},
+      SYQQX = #{syqqx,jdbcType=OTHER},
+      JEDW = #{jedw,jdbcType=OTHER},
+      FZHJ = #{fzhj,jdbcType=OTHER},
+      ZDDM = #{zddm,jdbcType=OTHER},
+      BDCDYH2 = #{bdcdyh2,jdbcType=OTHER},
+      XGBJ = #{xgbj,jdbcType=OTHER},
+      FCTSBS = #{fctsbs,jdbcType=DECIMAL}
+    where DJKID = #{djkid,jdbcType=OTHER}
+      and OID = #{oid,jdbcType=DECIMAL}
+  </update>
+
+</mapper>
