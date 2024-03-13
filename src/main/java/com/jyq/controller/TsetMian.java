@@ -9,8 +9,8 @@ public class TsetMian {
         new TestNet("371083");
 
 
-        
-        System.out.println(":");
+
+        System.out.println(":123");
     }
 
 }
